@@ -18,7 +18,7 @@ header{
 
 header h4 {
     margin-left: 40px;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: normal;
 }
 
@@ -31,7 +31,7 @@ header nav ul{
     flex-direction: row;
     gap: 40px;
     list-style-type: none;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
 header a{
@@ -56,7 +56,8 @@ header a{
 
 .navVar input{
     height: 40px;
-    width: 500px;
+    width: 200%;
+    margin-left: -50%;
     border-radius: 15px;
     font-size: 1vw;
     background-color: #3C4666;
@@ -67,19 +68,62 @@ header a{
 
 .search-container{
     position: relative;
+    background-color: white;
 }
 
 .search-container .icon-container {
     position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-40%);
-    pointer-events: none;  /* para que el input siga siendo editable */
+    right: 5%;              /* distancia al borde derecho */
+    top: 50%;                 /* centro vertical */
+    transform: translateY(-40%) translateX(430%); /* ajusta verticalmente */
+    pointer-events: none;     /* para que el input siga siendo editable */
 }
 
 .search-container .icon {
     width: 20px;
     height: 20px;
+    display: inline-block;
+}
+
+/* Estilos de la galeria */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 150px); /* 6 columnas de 150px */
+    grid-template-rows: repeat(2, 150px);    /* 2 filas de 150px */      
+    column-gap: 15px;                            
+    justify-content: center;                  /* centra el grid horizontalmente */
+    margin: 5% auto 0 auto;                   /* centrado del contenedor */
+}
+
+.item {
+    background-color: #485273;
+    aspect-ratio: 1 / 1;
+    width: 60%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center; /* centra el texto verticalmente */
+    align-items: center;     /* centra el texto horizontalmente */
+    position: relative;      /* necesario para la posición absoluta del icono */
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+}
+
+.item:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.item .icon {
+    position: absolute;
+    top: 10px;    /* distancia desde arriba */
+    left: 10px;   /* ahora a la izquierda */
+    width: 30%;
+    height: auto;
+}
+
+.item p{
+    font-size: 1.2vw;
 }
 
 body{
