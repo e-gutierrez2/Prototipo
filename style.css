@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+/*Estilos del header*/
+
+header{
+    background-color: #7586BF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+header h4 {
+    margin-left: 40px;
+    font-size: 1vw;
+    font-weight: normal;
+}
+
+header nav {
+    margin-right: 40px;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style-type: none;
+    font-size: 1vw;
+}
+
+header a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Seccion de navegacion*/
+
+.navVar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 5px;
+}
+
+.navVar h2{
+    font-size: 2vw;
+    color: #485273;
+}
+
+.navVar input{
+    height: 40px;
+    width: 500px;
+    border-radius: 15px;
+    font-size: 1vw;
+    background-color: #3C4666;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+}
+
+.search-container{
+    position: relative;
+}
+
+.search-container .icon-container {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-40%);
+    pointer-events: none;  /* para que el input siga siendo editable */
+}
+
+.search-container .icon {
+    width: 20px;
+    height: 20px;
+}
+
+body{
+    background-color: #576490;
+}
